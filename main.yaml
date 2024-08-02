@@ -1,0 +1,9 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: Action
+      fail: "Oh no, I failed!"
+      when: will_fail == "true"
